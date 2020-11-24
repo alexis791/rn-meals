@@ -21,6 +21,16 @@ const CategoryMealScreen = (props) => {
 	)
 }
 
+CategoryMealScreen.navigationOptions = (navigateParams) => {
+	const catId = navigateParams.navigation.getParam('categoryId')
+
+	const selectedCategory = CATEGORIES.find((item) => item.id === catId)
+
+	return {
+		headerTitle: selectedCategory.title
+	}
+}
+
 const styles = StyleSheet.create({
 	screen: {
 		flex: 1,
