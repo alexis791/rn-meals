@@ -4,12 +4,10 @@ import {
 	FlatList,
 	Text,
 	StyleSheet,
-	TouchableOpacity,
-	Platform
+	TouchableOpacity
 } from 'react-native'
 
 import { CATEGORIES } from '../data/dummy-data'
-import Color from '../constants/Colors'
 
 const CategoriesScreen = (props) => {
 	const renderGridItem = (itemData) => {
@@ -43,11 +41,7 @@ const CategoriesScreen = (props) => {
 }
 
 CategoriesScreen.navigationOptions = {
-	title: 'Categories',
-	headerStyle: {
-		backgroundColor: Platform.OS === 'android' ? Color.primaryColor : ''
-	},
-	headerTintColor: Platform.OS === 'android' ? 'white' : Color.primaryColor
+	title: 'Categories'
 }
 const styles = StyleSheet.create({
 	screen: {
