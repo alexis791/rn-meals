@@ -29,3 +29,5 @@ class Meal {
 		this.isVegan = isVegan
 	}
 }
+
+export default Meal
